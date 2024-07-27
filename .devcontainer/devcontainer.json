@@ -1,0 +1,27 @@
+{
+    "name": "DeepStream Dev Container",
+    "build" : {
+        "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+        "--rm",
+        "--net=host",
+        "--runtime=nvidia"
+    ],
+
+
+    // "mounts": [
+    //     "source=${localEnv:HOME}/.Xauthority,target=/root/.Xauthority,type=bind,consistency=cached,readonly",
+    //      "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"
+    // ],
+
+
+    // "settings": {
+    //     "terminal.integrated.shell.linux": "/bin/bash"
+    //             },
+    // "runArgs": ["--privileged"],
+    // "remoteEnv": {
+    //     "SSH_CLIENT": "${localEnv:SSH_CLIENT}"
+    //     }
+}
+# sudo docker run -it --rm --net=host --runtime nvidia  -e DISPLAY=$DISPLAY -w /opt/nvidia/deepstream/deepstream-6.0 -v /tmp/.X11-unix/:/tmp/.X11-unix nvcr.io/nvidia/deepstream-l4t:6.0.1-base
