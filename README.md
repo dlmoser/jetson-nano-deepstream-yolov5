@@ -22,7 +22,7 @@ docker run -it --rm --net=host --runtime=nvidia -v ${PWD}:/app jetson_nano_yolov
 ### Running the DeepStream Example
 Once inside the container, you can start a DeepStream example application by running
 ```sh
-deepstream-app -c deepstream_app_config
+deepstream-app -c deepstream_app_config.txt
 ```
 This command initiates the inference using an off-the-shelf YOLOv5 model on an NVIDIA example video and streams it via RTSP over your network.
 
